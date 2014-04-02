@@ -1,0 +1,194 @@
+/*This is the main style area for all 
+*elements that give the page structure 
+*or use shapes and shadows*/
+
+.main{
+position: realative; 
+width:1050px; 
+margin:auto;
+
+}
+
+
+.top{
+background-image:url('./imgs/top.png'); 
+width:960px; 
+height:40px; 
+background-repeat:no-repeat;
+margin:auto;
+}
+
+
+.middle{
+background-image:url('./imgs/middle.png');
+width:920px; /*960-(padding-left+padding-right)*/
+padding-left:20px;
+padding-right:20px;
+padding-top:0px;
+padding-bottom:0px;
+margin:auto;
+
+}
+
+.bottom{
+background-image:url('./imgs/bottom.png');
+width:960px; 
+height:40px;
+background-repeat:no-repeat;
+margin:auto;
+}
+
+#bannerpic{
+background-image:url('./imgs/background.jpg');
+background-repeat:no-repeat;
+width:904px;
+height:160px;
+}
+
+.plainText, .post , .postbodytext, .date, .title, .headings, a {font-family: Courier; /*A google API font: http://www.google.com/webfonts#UsePlace:use/Collection:Josefin+Slab*/}
+/*How body text looks (includes links)*/
+.mainTitle{
+	color:#0958AB;
+	font-family: Courier;
+	font-size:60px;
+
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+	background-color:white;
+
+	}
+.plainText{
+	font-family: Courier; /*A google API font: http://www.google.com/webfonts#UsePlace:use/Collection:Josefin+Slab*/
+	font-size:17px;
+	
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+a{text-decoration:none;color:#0958AB; font-size:14px;}
+a:hover{opacity:0.6;}
+
+.plainLinks{}
+
+/*Comments Section*/
+#commentsection{
+	/*position:absolute;
+	top:700px;
+	left: 25px;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width:350px;
+}
+
+#innerComments{
+}
+
+/*#commentsForm{
+	position: relative;
+	float:right;
+	width:440px;
+}*/
+.comments{
+	
+	/*border-style: solid;	
+	border-width:1px;
+	border-color:#7F95AA;
+	width: 350px;
+	float: left;*/
+		
+}
+
+.commentcells{
+	padding: 4px;
+	border-top-style:solid;
+	border-top-width: 2px;
+	border-top-color: #7F95AA;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	}
+
+.commentnum{
+	/*border-top-style: solid;	
+	border-top-width:1px;
+	border-top-color:#7F95AA;*/
+	font-family: Georgia;
+	color:#7F95AA;
+	font-size: 30px;
+	
+	}
+	
+#commentsForm{float:right;
+margin:20px 80px 0px 0px;
+background-color:#E5E5E5;
+}
+
+#commentInputs{
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-right:12px;
+	padding-left:12px;
+	}
+	
+.inputlabels{font-family: Georgia;
+	color:#4679AA;
+}
+
+.post{
+	padding-top:10px;
+	padding-bottom:0px;
+	padding-right:20px;
+	padding-left:20px;
+	margin-left:20px;
+	}
+	
+	.sidebar{float:right;
+	width:200px;
+	height: 250px;
+	overflow-y:scroll;
+	border: 2px solid #CCCCCC;
+	padding: 5px;
+	margin: 2px;
+	margin-right:50px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align:center;
+	color:#102431;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	}
+
+#main-bottom-padding{
+height: 250px;
+}
+/*Titles*/
+.title{font-weight:700; font-size:20px;}
+
+/*dates*/
+.date{font-size:14px; color:#0958AB;}
+
+/*body of post*/
+.postbodytext{font-size:14px;}
+
+/*headings*/
+.headings{
+	font-size: 20px; 
+	color:#0958AB;
+	font-weight:700;
+}
+
+#toplinks{float:right; }
+
+#feedlink{
+
+padding-bottom:2px;
+
+}
+
+html .fb_share_button { display: -moz-inline-block; display:inline-block; padding:1px 10px 0 5px; height:15px; border:1px solid #d8dfea; background:url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top right; } /* html .fb_share_button:hover { color:#fff; border-color:#295582; background:#3b5998 url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top right; text-decoration:none; }*/
+
+/*For About page*/
+td{padding:5px;}
