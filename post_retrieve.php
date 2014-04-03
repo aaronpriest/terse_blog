@@ -24,4 +24,6 @@ extract($row);
 foreach($archive as $output){
 	echo $output;
 }
+
+mysqli_close ($mysqli);
 ?>

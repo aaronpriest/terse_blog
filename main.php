@@ -43,8 +43,8 @@
 				</div>
 			<div class="bottom">
 			<span id="nav_links" class="plainText"  style="color:#0958AB; font-size:15px;padding-bottom:2px;font-weight:700">
-				<a href="./main.php?postID=defined">Defined</a>&nbsp;-
-				<a href="./main.php?postID=thanks">Thanks</a>&nbsp;-
+				<a href="./main.php?postID=defined">Defined</a>&nbsp;-<!--NEW: id=$thisone-->
+				<a href="./main.php?postID=thanks">Thanks</a>&nbsp;-<!--NEW: id=$thatone-->
 				<a href="http://www.poets.org/page.php/prmID/41" target="_blank">National Poetry Month</a></span>
 
 			
@@ -67,28 +67,37 @@
 					<div class="sidebar">
 						<span class="title">Poems(<span id="stats"></span>)</span><br/>
 
+						<!--AHA! THERE IS NO NEED FOR =current! Main will always display the current post if postID=NULL then the latest post will display-->
+
 						<?php if($_GET['postID']!="current") echo "<a href='./main.php?postID=current'><b>Current</b></a><br/><br/>";?>
 							 
 							 <?php include "post_retrieve.php";?>
 							 <?php echo "<input type='hidden' value='{$title}' id='current_title' />"; ?>
-							 </div>
+					</div>
 					
 							<?php 
-								if($_GET['postID']=="current")
-									{
-										$display = "./posts/{$current}";//$current assigned in post_retreive.php
-										$comment_postID = str_replace(".html", "", $current);
-									}
-								else 
-									{
-									$display = "./posts/".$_GET['postID'].".html";
-									$comment_postID = $_GET['postID'];
-									}
-								include $display;
+												
+								//get from MySQL WHERE postID
+					//I believe this is the stuff that displays the post
+					if($_GET['postID']=="current")
+						{
+							$display = "./posts/{$current}";//$current assigned in post_retreive.php
+							$comment_postID = str_replace(".html", "", $current);
+						}
+					else 
+						{
+						$display = "./posts/".$_GET['postID'].".html";
+						$comment_postID = $_GET['postID'];
+						}
+					include $display;
+					//end
+
+
 								echo "<input type='hidden' value='{$num_posts}' id='num_posts' />";
 								echo "<input type='hidden' value='{$revised_date}' id='updated' />";
 
 								/*This should be 'off' if the pages are not commentable*/
+								//NEW: postID=$thisone              postID=$thatone
 								if(($_GET['postID']=='defined')||($_GET['postID']=='thanks')){
 									echo "<input type='hidden' name='comment_toggle' id='comment_toggle' value='off' />";
 								}
