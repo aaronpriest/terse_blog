@@ -6,7 +6,7 @@ elements should be styled conservatively and grouped whenever possible
 ***/
 body
 {
-    background-image: url("./Images/ever_reaching.png");
+margin: 0px;
 /*Font Smoothing https://davidwalsh.name/font-smoothing*/
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
@@ -16,34 +16,34 @@ body
 #WebsiteName
 {
 }
-#top {
-    background-image: url("./Images/top.png");
-    width:960px;
-    height:40px;
-    background-repeat:no-repeat;
 
+#BannerWithMenus {
+    background-color:RoyalBlue;
+    width: 100%;
+    padding: 1%;
+}
+.menu_item
+{
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1%;
 }
 
+.menu_item:hover {
+    background-color: #2251dd;
+    cursor: pointer;
+}
 #bottom {
-    background-image: url("./Images/bottom.png");
-    width:960px;
-    height:40px;
-    background-repeat:no-repeat;
-
 }
+
 #ContainerForAllContent
 {
-    background-image:url('./Images/middle.png');
-    width:920px; /*960-(padding-left+padding-right)*/
-    padding-left:20px;
-    padding-right:20px;
-    padding-top:0px;
-    padding-bottom:0px;
-
-
+    padding: 20px;
 }
 
-.block2inline {display:inline;} /*for when block elements interrupt the background of divs*/
+
 
 #ThePoemContainer
 {
