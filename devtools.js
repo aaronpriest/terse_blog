@@ -17,3 +17,4 @@ var j = 0; //see note within the for
         j++;
     }
 }
+//<input type="button" name="ShowBorders" value="See Borders" onclick="markAllBorders()"/>

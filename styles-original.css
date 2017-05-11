@@ -13,40 +13,90 @@ margin: 0px;
 }
 
 
-#WebsiteName
+#NamePlate
 {
+    padding-left: 1%;
+    background-image: url("./Images/bg-spring.jpg");
+    
+}
+.nameplate_text
+{
+    display: inline-block;
+    color: white;
 }
 
+
+/*Banner and Menu(s)********************/
+/*https://www.w3schools.com/howto/howto_js_dropdown.asp*/
 #BannerWithMenus {
-    background-color:RoyalBlue;
+    background-color:rgb(65,105,225); /*RoyalBlue*/
     width: 100%;
-    padding: 1%;
+    padding: 0.5%;
 }
 .menu_item
 {
     color: #FFFFFF;
+    background-color:inherit;
+    border:none;
     font-family: Helvetica;
     font-size: 20px;
     text-decoration: none;
-    padding: 1%;
-}
-
-.menu_item:hover {
-    background-color: #2251dd;
     cursor: pointer;
-}
-#bottom {
+    outline: none;
+    margin: 0px;
 }
 
-#ContainerForAllContent
+/*.menu_item:hover, .menu_item:focus {
+background-color:#b3c47b;
+}*/
+.moused_over
 {
-    padding: 20px;
+background-color:rgb(155,171,219);
+color: black;
+}
+
+.dropdown_main {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_guts {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_guts a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown_guts a:hover {
+    background-color: rgb(155,171,219);
+    color: black;
+    }
+
+.show {
+    display:block;
+    background-color:rgb(155,171,219);
+    color: black;
 }
 
 
+/*********************/
 
+/* Post Poem and Related Text******************/
 #ThePoemContainer
 {
+padding-left: 1.5%;
 }
 
 h1, h2, h3 {font-family: Times;}
@@ -61,3 +111,4 @@ p {
 #ThePoemsTitle
 {
 }
+/*********************/
