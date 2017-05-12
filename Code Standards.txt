@@ -1,0 +1,18 @@
+Code Standards:
+1. No logical statements, function calls, database calls, variable assignments, etc. in HTML code, only "echo" and "include" statements.
+2. Only HTML elements in PHP code, no HTML class assignments, inline "style" declarations, id's, javascript, etc.
+3. All include statements that affect the whole page or could be used in the whole page, go at the top of the page.
+4. All HTML is mobile-friendly. Never assumes screen size, so "px" is not allowed. Use "%" and "em", except in certain cases
+    Note pixels/16=em. But try to stop thinking in terms of px.
+    Pixels      Em
+    1           0.1
+    8           0.5
+    10          0.6
+    11          0.7
+    12          0.8
+    14          0.9
+    16          1
+    18          1.1
+    24          1.5
+    48          3
+5.
