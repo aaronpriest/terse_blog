@@ -12,9 +12,9 @@ include "index_code.php";
     <meta name="author" content="Aaron B. Priest">
 
  <!--Styles, scripts, other functional header content-->
- 	<link rel="stylesheet" type="text/css" href=".\styles-original.css?rf=<?php echo rand();?>" / >
-    <script src=".\devtools.js" type="text/javascript"></script>
-    <script src=".\page_actions.js" type="text/javascript"></script>
+ 	<link rel="stylesheet" type="text/css" href="./styles-original.css?rf=<?php echo rand();?>" / >
+    <script src="./devtools.js" type="text/javascript"></script>
+    <script src="./page_actions.js" type="text/javascript"></script>
     <link rel="icon" href="favicon.ico" />
 <!--End: Styles and scripts-->
 
