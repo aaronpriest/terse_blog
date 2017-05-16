@@ -3,6 +3,8 @@
 logical statements
 and variable assignments for index pages
 */
+/* Using $base_url so that files can be referenced properly across DEV and PROD environments.*/
+$base_url=isset($_SERVER['HTTPS']) ? "https" : "http" . "://"."localhost:81/terse_builder/";
 $title="ThePoemsTitle";
 $written_date=date("F j, Y");
 //Just for fun. Feel free to delete it
@@ -19,5 +21,4 @@ $linkset="";
 for($a=0; $a<sizeof($archive_list); $a++){
     $linkset= $linkset."<a href=\"#\">{$archive_list[$a]}</a>";
 }
-
 ?>

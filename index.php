@@ -1,57 +1,58 @@
 <?php //see Code Standards.txt
-include "index_code.php";
+include "page_code.php";
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-  	<title><?php echo $title;?>: Terse. A blog in verse. The first poetry blog to blog using poems.</title>
+  	<title><?php echo $title;?> - Terse. A blog in verse. The first poetry blog to blog using poems.</title>
  <!--All Meta-content-->
-    <meta name=viewport content='width=500'>
+    <meta name=viewport content='width=640'>
     <meta name="description" content="A blog where posts are short, terse poems reacting to ordinary current events.">
     <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $taglist;?>">
     <meta name="author" content="Aaron B. Priest">
 
  <!--Styles, scripts, other functional header content-->
- 	<link rel="stylesheet" type="text/css" href="./styles-original.css?rf=<?php echo rand();?>" / >
-    <script src="./devtools.js" type="text/javascript"></script>
-    <script src="./page_actions.js" type="text/javascript"></script>
-    <link rel="icon" href="favicon.ico" />
+ <link rel="stylesheet" href="<?php echo $base_url;?>Styles/core_styles.css?rf=<?php echo rand();?>" / >
+   <script src="<?php echo $base_url;?>Scripts/devtools.js"></script>
+   <script src="<?php echo $base_url;?>Scripts/page_actions.js"></script>
+   <link rel="icon" href="<?php echo $base_url;?>Images/favicon.ico" />
 <!--End: Styles and scripts-->
 
   </head>
   <body>
-    <div id="NamePlate"><h1 class="nameplate_text">Terse.</h1> <p class="nameplate_text">A blog in verse.</p></div>
+    <header><h1>Terse.</h1> <p>A blog in verse.</p></header>
     <!--Top Menu-->
-    <div id="BannerWithMenus" class="dropdown_main">
+    <nav>
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
               <?php echo $linkset;?>
           </div>
-    </div>
+    <button id="Item2" class="menu_item">About</button>
+    </nav>
     <!--End: Top Menu-->
-    	<div id="ThePoemContainer">
-    		<h2 id="ThePoemsTitle"><?php echo $title;?></h2><p class="dates_and_other_small_text" id="date"> - <?php echo $written_date;?></p>
-    			<span id="PoemBody">
+    	<main>
+        <section>
+    		<h2><?php echo $title;?></h2><time> - <?php echo $written_date;?></time>
+
                     <?php
                     //Just the inner part of the poem
                     echo $post_content;
                     ?>
                 <br/>
   				<p>&#169;2017 Aaron B. Priest</p>
-  			</span><!--End: PoemBody-->
 
-            <!--Hidden inputs with meta-information about the poem-->
-            <input type="hidden" name="tags" value="<?php echo $taglist;?>" />
-            <input type="hidden" name="PoemID" value="<?php echo $poem_id;?>" />
-            <input type="hidden" name="PoemStatus" value="<?php echo $poem_status;?>"/><!--"C" for "Current" other possible value: "A" for "Archived"-->
-            <!--End: Hidden inputs-->
-      </div><!--End: ThePoemContainer-->
+      </section>
+      </main><!--End: ThePoemContainer-->
 
+      <!--Hidden inputs with meta-information about the poem or page-->
+      <input type="hidden" name="tags" value="<?php echo $taglist;?>" />
+      <input type="hidden" name="PoemID" value="<?php echo $poem_id;?>" />
+      <input type="hidden" name="PoemStatus" value="<?php echo $poem_status;?>"/><!--"C" for "Current" other possible value: "A" for "Archived"-->
+      <!--End: Hidden inputs-->
 
 
   <!--Dev Tools-->
-
-
+<!--<input type="button" name="ShowBorders" value="See Borders" onclick="markAllBorders()"/>-->
   <!--End: Dev Tools-->
   	</body>
 </html>

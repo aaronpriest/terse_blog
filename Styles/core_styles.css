@@ -1,0 +1,109 @@
+body
+{
+margin: 0%;
+/*Font Smoothing https://davidwalsh.name/font-smoothing*/
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+header
+{
+    padding-left: 1%;
+    background-image: url("../Images/bg-spring.jpg");
+
+}
+
+header p, h1
+{
+    display: inline-block;
+    color: white;
+}
+
+nav {
+    background-color:rgb(65,105,225); /*RoyalBlue*/
+    width: 100%;
+    padding-left: 0.5%;
+    position: relative;
+    display: inline-block;
+
+}
+/* Post Poem and Related Text******************/
+main
+{
+padding-left: 1.5%;
+padding-top: 1%;
+}
+
+h1, h2, h3 {font-family: Times;}
+
+p {
+    font-family: Courier;
+    font-size: 0.9em;
+}
+
+time {
+    font-size: 0.8em;
+    font-style: italic;
+    display:inline;
+}
+
+section h2
+{
+    display:inline;
+}
+/*********************/
+
+/*Banner and Menu(s)********************/
+/*https://www.w3schools.com/howto/howto_js_dropdown.asp*/
+.menu_item
+{
+    color: #FFFFFF;
+    background-color:inherit;
+    border:none;
+    font-family: Helvetica;
+    font-size: 1.3em;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0%;
+    padding: 0.5%;
+}
+
+.moused_over
+{
+background-color:rgb(155,171,219);
+color: black;
+}
+
+.dropdown_guts {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 160px; /*exception to px rule see Code Standards, rule 4*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_guts a {
+    color: #FFFFFF;
+    padding: 8% 8%;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown_guts a:hover {
+    background-color: rgb(155,171,219);
+    color: black;
+    }
+
+.show {
+    display:block;
+    background-color:rgb(155,171,219);
+    color: black;
+}
+
+
+/*********************/

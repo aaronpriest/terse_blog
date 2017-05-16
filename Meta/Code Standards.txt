@@ -16,3 +16,11 @@ Code Standards:
     24          1.5
     48          3
 5.
+
+
+/***
+Style Guide:
+#id's are for attributes like width, height position and box model settings https://www.w3schools.com/css/css_boxmodel.asp
+.classes are for attributes like font-family etc.
+elements should be styled conservatively and grouped whenever possible
+***/

@@ -2,8 +2,9 @@
 Functions for help with development
 */
 function markAllBorders(){
+
     var colors = ["Crimson","DarkBlue","DarkGreen","BlueViolet","DeepPink","Green","MediumSlateBlue","Tomato","Navy","OliveDrab","Purple","SeaGreen","MediumVioletRed"];
-var divs = document.getElementsByTagName("div");
+var divs = document.getElementsByTagName("article");
 var j = 0; //see note within the for
     for(i=0; i<divs.length; i++){
 
