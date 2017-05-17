@@ -1,14 +1,14 @@
 <?php //see Code Standards.txt
-include "page_code.php";
+include "index_code.php";
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-  	<title><?php echo $title;?> - Terse. A blog in verse. The first poetry blog to blog using poems.</title>
+  	<title><?php echo $post_to_display->title;?> - Terse. A blog in verse. The first poetry blog to blog using poems.</title>
  <!--All Meta-content-->
     <meta name=viewport content='width=640'>
     <meta name="description" content="A blog where posts are short, terse poems reacting to ordinary current events.">
-    <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $taglist;?>">
+    <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $post_to_display->taglist;?>">
     <meta name="author" content="Aaron B. Priest">
 
  <!--Styles, scripts, other functional header content-->
@@ -25,18 +25,18 @@ include "page_code.php";
     <nav>
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
-              <?php echo $linkset;?>
+              <?php echo $post_to_display->linkset;?>
           </div>
     <button id="Item2" class="menu_item">About</button>
     </nav>
     <!--End: Top Menu-->
     	<main>
         <section>
-    		<h2><?php echo $title;?></h2><time> - <?php echo $written_date;?></time>
+    		<h2><?php echo $post_to_display->title;?></h2><time> - <?php echo $post_to_display->written_date;?></time>
 
                     <?php
                     //Just the inner part of the poem
-                    echo $post_content;
+                    echo $post_to_display->post_content;
                     ?>
                 <br/>
   				<p>&#169;2017 Aaron B. Priest</p>
@@ -45,9 +45,9 @@ include "page_code.php";
       </main><!--End: ThePoemContainer-->
 
       <!--Hidden inputs with meta-information about the poem or page-->
-      <input type="hidden" name="tags" value="<?php echo $taglist;?>" />
-      <input type="hidden" name="PoemID" value="<?php echo $poem_id;?>" />
-      <input type="hidden" name="PoemStatus" value="<?php echo $poem_status;?>"/><!--"C" for "Current" other possible value: "A" for "Archived"-->
+      <input type="hidden" name="tags" value="<?php echo $post_to_display->taglist;?>" />
+      <input type="hidden" name="PoemID" value="<?php echo $post_to_display->poem_id;?>" />
+      <input type="hidden" name="PoemStatus" value="<?php echo $post_to_display->poem_status;?>"/><!--"C" for "Current" other possible value: "A" for "Archived"-->
       <!--End: Hidden inputs-->
 
 
