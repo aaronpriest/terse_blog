@@ -1,5 +1,6 @@
 <?php //see Code Standards.txt
-include "index_code.php";
+require("essentials.inc");
+require("context.inc");
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@ include "index_code.php";
     <nav>
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
-              <?php echo $post_to_display->linkset;?>
+              <?php echo $archive_retrieval->linkset;?>
           </div>
     <button id="Item2" class="menu_item">About</button>
     </nav>

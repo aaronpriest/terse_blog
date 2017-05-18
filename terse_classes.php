@@ -16,7 +16,7 @@ class TersePost
     IF the poem_id is not set, it means its the index which does not care about the ID
     IF the poem_status is not set, it means its an achive file and status will naturally be 'A'*/
     if($this->poem_status=='C') {$this->poem_id=date('mdY').'-1'; $this->title="IndexFile";}
-    elseif ($this->poem_status=='A') {$this->poem_status='A'; $this->title="ArchiveFile";}
+    elseif ($this->poem_status=='A') {$this->poem_id=date('mdY').'-1'; $this->poem_status='A'; $this->title="ArchiveFile";}
     else {echo "Error:\$this->status is not set to A or C. Check class definition.";
       $this->title="Error.";}
     /*More test data in place of DB data*/
@@ -24,6 +24,7 @@ class TersePost
     $this->post_content="";
     for($line=0; $line<15; $line++)
     {
+        $display_number=$line+1;
         $this->post_content=$this->post_content."<p>Line {$line}.</p>";
     }
     $this->taglist='city, urban, weariness, Spring';
