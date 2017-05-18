@@ -1,5 +1,5 @@
 <?php
-$poem_status='C';
+$poem_id=10001;
 require_once("code_page.php");
 //Not test data. Index will always retrieve only the most current poem-post
 

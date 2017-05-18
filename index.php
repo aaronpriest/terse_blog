@@ -5,11 +5,11 @@ require("context.inc");
 <!DOCTYPE html>
 <html>
   <head>
-  	<title><?php echo $post_to_display->title;?> - Terse. A blog in verse. The first poetry blog to blog using poems.</title>
+  	<title><?php echo $poem->title;?> - Terse. A blog in verse. The first poetry blog to blog using poems.</title>
  <!--All Meta-content-->
     <meta name=viewport content='width=640'>
     <meta name="description" content="A blog where posts are short, terse poems reacting to ordinary current events.">
-    <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $post_to_display->taglist;?>">
+    <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $poem->taglist;?>">
     <meta name="author" content="Aaron B. Priest">
 
  <!--Styles, scripts, other functional header content-->
@@ -26,7 +26,7 @@ require("context.inc");
     <nav>
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
-              <?php echo $archive_retrieval->linkset;?>
+              <?php echo $poem->linkset;?>
           </div>
     <button id="Item2" class="menu_item">About</button>
     </nav>
@@ -35,14 +35,15 @@ require("context.inc");
         <section>
           <aside>
             <h3>Previous</h3>
-            <?php echo $archive_retrieval->linkset;?>
+            <?php echo $poem->linkset;?>
           </aside>
-    		<h2><?php echo $post_to_display->title;?></h2><time> - <?php echo $post_to_display->written_date;?></time>
-
+    		<h2><?php echo $poem->title;?></h2><time> - <?php echo $poem->written_date;?></time>
+                  <article>
                     <?php
                     //Just the inner part of the poem
-                    echo $post_to_display->post_content;
+                    echo $poem->poem_content;
                     ?>
+                  </article>
                 <br/>
   				<p>&#169;2017 Aaron B. Priest</p>
 
@@ -50,9 +51,9 @@ require("context.inc");
       </main><!--End: ThePoemContainer-->
 
       <!--Hidden inputs with meta-information about the poem or page-->
-      <input type="hidden" name="tags" value="<?php echo $post_to_display->taglist;?>" />
-      <input type="hidden" name="PoemID" value="<?php echo $post_to_display->poem_id;?>" />
-      <input type="hidden" name="PoemStatus" value="<?php echo $post_to_display->poem_status;?>"/><!--"C" for "Current" other possible value: "A" for "Archived"-->
+      <input type="hidden" name="tags" value="<?php echo $poem->get_tag_list();?>" />
+      <input type="hidden" name="PoemID" value="<?php echo $poem->poem_id;?>" />
+
       <!--End: Hidden inputs-->
 
 

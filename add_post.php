@@ -23,9 +23,11 @@ if(isset($_GET["title"])){
     copy("post_index_template.php", $new_dir_path."/index.php");
 /*Step 9: Create context.inc for this specific directory*/
     $file_hndl = fopen($new_dir_path."/context.inc", "a") or die("Unable to open the new context.inc file!");
-    $file_content = "<?php \$poem_status='A';\n";
+    $file_content = "<?php\n";
     /*more to come here*/
-    $file_content = $file_content."require_once(\"../../code_page.php\");?>\n";
+    $file_content = $file_content."\$poem_id='10002';\n";
+    $file_content = $file_content."require_once(\"../../code_page.php\");\n";
+    $file_content = $file_content."?>";
     fwrite($file_hndl, $file_content);
     fclose($file_hndl);
   }
