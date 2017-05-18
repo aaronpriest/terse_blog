@@ -51,6 +51,12 @@ section h2
 {
     display:inline;
 }
+
+aside {
+  float: right;
+padding: 5%;}
+
+aside a {display: block;}
 /*********************/
 
 /*Banner and Menu(s)********************/

@@ -7,6 +7,8 @@ require("../../terse_classes.php");
 /*Code to retrieve post poem*/
 $post_to_display = new TersePost('A');
 $post_to_display->provide_test_data();
+$archive_retrieval =new TerseArchives('A');
+$archive_retrieval->provide_archive_data();
 /*End retrieve process*/
 
 ?>

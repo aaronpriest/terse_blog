@@ -32,6 +32,10 @@ include "page_code.php";
     <!--End: Top Menu-->
     	<main>
         <section>
+          <aside>
+            <h3>Previous</h3>
+            <?php echo $archive_retrieval->linkset;?>
+          </aside>
     		<h2><?php echo $post_to_display->title;?></h2><time> - <?php echo $post_to_display->written_date;?></time>
 
                     <?php
