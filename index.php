@@ -37,7 +37,7 @@ require("context.inc");
             <h3>Previous</h3>
             <?php echo $poem->linkset;?>
           </aside>
-    		<h2><?php echo $poem->title;?></h2><time> - <?php echo $poem->written_date;?></time>
+    		<h2><?php echo $poem->title;?></h2><time> - <?php echo $poem->display_date;?></time>
                   <article>
                     <?php
                     //Just the inner part of the poem

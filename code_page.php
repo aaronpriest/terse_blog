@@ -9,5 +9,7 @@ require_once("terse_classes.php");
 /*Code to retrieve post poem*/
 $poem=new TersePost();
 $poem->get_poem($poem_id);
-$poem->provide_test_data();
+$poem->get_archives();
+
+//$poem->provide_test_data();
 ?>
