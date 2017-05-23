@@ -84,11 +84,21 @@ class TersePost
   $this->linkset="";
   for($a=0; $a<sizeof($this->archive_list); $a++)
     {
+      if($this->archive_list[$a]["poem_id"]!=999999){//poem_id=999999 reserved and not linked
       $dir_name=str_replace(" ", "-", $this->archive_list[$a]["title"]);
       $this->linkset= $this->linkset."<a href=\"{$base_url}Posts/$dir_name\">{$this->archive_list[$a]['title']}"." - ".$this->archive_list[$a]['display_date']."</a>";
+      }
     }
-  /*End Test Data*/
-}
+  }
+
+    public function get_new_poem_id(){
+      require("db.inc");
+      $database_last_poem_id = new db_driver($host, $user, $password, $database);
+      $poem_id_query="SELECT MAX(poem_id) AS poem_id FROM poems WHERE poem_id <> '999999'";
+      $database_last_poem_id->db_query($poem_id_query);
+      $this->poem_id = $database_last_poem_id->col_values[0]["poem_id"]+1;
+    }
+
     public function provide_test_data(){
     $this->archive_list= array("Cats - 5/5/17", "Dogs - 4/26/17", "Hats - 4/2/17");
     $this->linkset="";

@@ -57,6 +57,10 @@ aside {
 padding: 5%;}
 
 aside a {display: block;}
+
+#TinyMCEContainer{
+    width:70% !important;
+}
 /*********************/
 
 /*Banner and Menu(s)********************/
