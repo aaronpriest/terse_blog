@@ -59,7 +59,7 @@ class db_driver
 
         //fetch_array returns one row at a time, so we need to do this
         $i=0;//each $i is a row
-        while($row = $result->fetch_array(MYSQL_ASSOC))
+        while($row = $result->fetch_array(MYSQLI_ASSOC))
         {
           //each $k is a column value
           for($k=0; $k<sizeof($this->col_names); $k++)
