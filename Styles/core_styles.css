@@ -1,6 +1,6 @@
 body
 {
-margin: 0%;
+margin:0%;
 /*Font Smoothing https://davidwalsh.name/font-smoothing*/
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
@@ -30,11 +30,15 @@ nav {
 /* Post Poem and Related Text******************/
 main
 {
+  width:50%;
+  position:absolute;
+  margin: auto;
 padding-left: 1.5%;
 padding-top: 1%;
 }
 
-h1, h2, h3 {font-family: Times;}
+h1, h2, h3 {font-family: Times;
+  }
 
 p {
     font-family: Courier;
@@ -54,7 +58,8 @@ section h2
 
 aside {
   float: right;
-padding: 5%;}
+padding: 5%;
+}
 
 aside a {display: block;}
 
@@ -65,6 +70,9 @@ aside a {display: block;}
 
 /*Banner and Menu(s)********************/
 /*https://www.w3schools.com/howto/howto_js_dropdown.asp*/
+.center{
+  margin-left: 25%;
+}
 .menu_item
 {
     color: #FFFFFF;
@@ -90,7 +98,7 @@ color: black;
     color: #FFFFFF;
     display: none;
     position: absolute;
-    background-color: inherit;
+      background-color:rgb(65,105,225); /*RoyalBlue*/
     min-width: 160px; /*exception to px rule see Code Standards, rule 4*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -107,7 +115,7 @@ color: black;
 }
 
 .dropdown_guts a:hover {
-   
+
 	background-color:rgb(102,133,226);/*cornflowerblue*/
     color: black;
     }

@@ -12,7 +12,7 @@ require("context.inc");
     <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $poem->taglist;?>">
     <meta name="author" content="Aaron B. Priest">
 
- <!--Styles, scripts, other functional header content-->   
+ <!--Styles, scripts, other functional header content-->
  <!--jQuery from Google-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <link rel="stylesheet" href="<?php echo $base_url;?>Styles/core_styles.css?rf=<?php echo rand();?>" / >
@@ -25,17 +25,19 @@ require("context.inc");
 
   </head>
   <body>
-    <header><h1>Terse.</h1> <p>A blog in verse.</p></header>
+    <header><h1 class="center">Terse.</h1> <p>A blog in verse.</p></header>
     <!--Top Menu-->
     <nav>
+      <div class="center" >
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
               <?php echo $poem->linkset;?>
           </div>
     <button id="Item2" class="menu_item">About</button>
+    </div>
     </nav>
     <!--End: Top Menu-->
-    	<main>
+    	<main  class="center">
         <section>
           <aside>
             <h3>Previous</h3>
