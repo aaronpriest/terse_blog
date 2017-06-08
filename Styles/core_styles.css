@@ -94,6 +94,8 @@ color: black;
     min-width: 160px; /*exception to px rule see Code Standards, rule 4*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
 }
 
 .dropdown_guts a {
@@ -105,9 +107,11 @@ color: black;
 }
 
 .dropdown_guts a:hover {
-    background-color: rgb(155,171,219);
+   
+	background-color:rgb(102,133,226);/*cornflowerblue*/
     color: black;
     }
+
 
 .show {
     display:block;

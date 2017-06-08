@@ -56,6 +56,12 @@ $file_content2 = $file_content2."?>";
 fwrite($file_hndl_context_inc, $file_content2);
 fclose($file_hndl_context_inc);
     echo $link_to_post;
+
+$file_hndl_gitignore = fopen("../../.gitignore", "a") or die("Unable to reopen .gitignore file!");
+$gitignore_text= "/Posts/{$new_post_title}";
+fwrite($file_hndl_gitignore, $gitignore_text);
+fclose($file_hndl_gitignore);
+
   }
   else echo "Warning: Directory called {$new_post_title} already exists. No new directory created.";
 }

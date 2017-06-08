@@ -12,10 +12,14 @@ require("context.inc");
     <meta name="keywords" content="terse, poem, poetry, poet, blog, writing, current, <?php echo $poem->taglist;?>">
     <meta name="author" content="Aaron B. Priest">
 
- <!--Styles, scripts, other functional header content-->
+ <!--Styles, scripts, other functional header content-->   
+ <!--jQuery from Google-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <link rel="stylesheet" href="<?php echo $base_url;?>Styles/core_styles.css?rf=<?php echo rand();?>" / >
    <script src="<?php echo $base_url;?>Scripts/devtools.js"></script>
    <script src="<?php echo $base_url;?>Scripts/page_actions.js"></script>
+
+
    <link rel="icon" href="<?php echo $base_url;?>Images/favicon.ico" />
 <!--End: Styles and scripts-->
 
