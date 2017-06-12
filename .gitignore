@@ -1,4 +1,5 @@
-# .gitignore file, appended by 
+# .gitignore file, appended by
 /db.inc
 /Posts/Gitignore
 /Posts/Styling
+/Posts/Feature

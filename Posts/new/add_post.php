@@ -58,7 +58,7 @@ fclose($file_hndl_context_inc);
     echo $link_to_post;
 
 $file_hndl_gitignore = fopen("../../.gitignore", "a") or die("Unable to reopen .gitignore file!");
-$gitignore_text= "/Posts/{$new_post_title}";
+$gitignore_text= "\n/Posts/{$new_post_title}";
 fwrite($file_hndl_gitignore, $gitignore_text);
 fclose($file_hndl_gitignore);
 
