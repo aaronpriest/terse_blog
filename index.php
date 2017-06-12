@@ -25,19 +25,22 @@ require("context.inc");
 
   </head>
   <body>
-    <header><h1 class="center">Terse.</h1> <p>A blog in verse.</p></header>
+    <div id="header-back"></div>
+    <div id="nav-back"></div>
+    <div id="res-based-container">
+    <header><h1>Terse.</h1> <p>A blog in verse.</p></header>
     <!--Top Menu-->
     <nav>
-      <div class="center" >
+
     <button id="Item1" onclick="showMenu()" class="menu_item">Poems</button>
         <div id="MainDropDownMenu" class="dropdown_guts">
               <?php echo $poem->linkset;?>
           </div>
     <button id="Item2" class="menu_item">About</button>
-    </div>
+
     </nav>
     <!--End: Top Menu-->
-    	<main  class="center">
+    	<main>
         <section>
           <aside>
             <h3>Previous</h3>
@@ -59,7 +62,7 @@ require("context.inc");
       <!--Hidden inputs with meta-information about the poem or page-->
       <input type="hidden" name="tags" value="<?php echo $poem->get_tag_list();?>" />
       <input type="hidden" name="PoemID" value="<?php echo $poem->poem_id;?>" />
-
+</div><!--#large-res-container-->
       <!--End: Hidden inputs-->
 
 
